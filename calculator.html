@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script   src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    
+    <link rel="stylesheet" href="calculator.css">
+    <script src="./calculator.js"></script>
+    <base target="_blank" >
+</head>
+<body>
+<div class="calc-wr">
+    <form>
+        <div class="calc" id="calculator">
+            <div class="calc--r calc--r-weight">
+                <div class="calc--lb"><span class="lb-icon lb-icon-weight"></span>Tu peso</div>
+                <div class="input-wr">
+                    <span id="weight-sl--vl"></span>
+                    <input type="number" name="weight" value="" min="0" tabindex="0"/>
+                </div>
+                <div class="calc--u-tabs">
+                    <input type="radio" id="unit-kg" name="unit" value="kg" class="u-t--i" checked><label for="unit-kg" class="u-t--l first" tabindex="1">kg</label>
+                    <input type="radio" id="unit-lb" name="unit" value="lb" class="u-t--i"><label for="unit-lb" class="u-t--l" tabindex="2">lb</label>
+                </div>
+                <div
+                        id="weight-slider"
+                        data-range="max"
+                        data-min="0"
+                        data-max="200"
+                        data-step="1"
+                        data-value=""
+                        data-type=""
+                        class="calc--sl">
+                </div>
+            </div>
+            <div class="calc--r calc--r-strength">
+                <div class="calc--lb"><span class="lb-icon lb-icon-strength"></span>Dosis deseada</div>
+                <div class="calc--radio-str">
+                    <input type="radio" id="strength-mild" name="strength" value="mild" class="radio-str--i"><label for="strength-mild" class="radio-str--l first" tabindex="3">Media
+                    <span class="lb-tooltip">Dosis media (Como tratamiento preventivo, salud en general, nausea)</span></label>
+                    <input type="radio" id="strength-moderate" name="strength" value="moderate" class="radio-str--i"><label for="strength-moderate" class="radio-str--l second" tabindex="4">Moderada
+                    <span class="lb-tooltip">Dosis moderada (Nausea, dolor, inflamación, insomnio leve, ansiedad media, dolores de cabeza)</span></label>
+                    <input type="radio" id="strength-heavy" name="strength" value="heavy" class="radio-str--i"><label for="strength-heavy" class="radio-str--l" tabindex="5">Alta
+                    <span class="lb-tooltip">Dosis fuerte (Dolor crónico, inflamación, insomnio, ansiedad, migrañas, epilepsia)</span></label>
+                </div>
+            </div>
+            <div class="calc--r calc--r-totalcbd">
+                <div class="calc--lb"><span class="lb-icon lb-icon-totalcbd"></span>Concentración de CBD en el frasco <span class="ask-tooltip"></span><span class="lb-tooltip">How much CBD is in the bottle (found on the label)?</span></div>
+                <div class="input-wr">
+                    <input type="number" name="totalcbd" value="" class="input-wr--i" placeholder="500" tabindex="6">
+                    <span class="input-wr--u">mg</span>
+                </div>
+            </div>
+            <div class="calc--r calc--r-volume">
+                <div class="calc--lb"><span class="lb-icon lb-icon-volume"></span>Volumen del frasco en mL<span class="ask-tooltip"></span><span class="lb-tooltip">How big is your bottle of CBD?</span></div>
+                <div class="select-wr">
+                    <select name="volume" id="volume-select" tabindex="7s">
+                        <option disabled selected value>--</option>
+                        <option value="15">15 mL (0.5 oz)</option>
+                        <option value="30">30 mL (1 oz)</option>
+                        <option value="50">50 mL (1.7 oz)</option>
+                        <option value="60">60 mL (2 oz)</option>
+                        <option value="120">120 mL (4 oz)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="calc-br">
+           
+        </div>
+        <div class="calc-actions">
+            <div class="b-reset">
+                <span class="reset-icon"></span><input type="reset" id="calc-rs" name="reset" value="Reiniciar formato">
+            </div>
+            <div class="b-submit">
+                <a href="./calculator.js" id="calc-sb" class="b b--large b--purple"><span>Calcular</span></a>
+            </div>
+        </div>
+    </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
